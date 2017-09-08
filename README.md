@@ -1,12 +1,12 @@
 # testcafe-browser-provider-puppeteer
 [![Build Status](https://travis-ci.org/jdobosz/testcafe-browser-provider-puppeteer.svg)](https://travis-ci.org/jdobosz/testcafe-browser-provider-puppeteer)
 
-This is the **puppeteer** browser provider plugin for [TestCafe](http://devexpress.github.io/testcafe).
+This is the [puppeteer](https://github.com/GoogleChrome/puppeteer) browser provider plugin for [TestCafe](http://devexpress.github.io/testcafe).
 
 ## Install
 
 ```
-npm install testcafe-browser-provider-puppeteer
+npm install --save-dev testcafe-browser-provider-puppeteer
 ```
 
 ## Usage
@@ -30,4 +30,4 @@ testCafe
 ```
 
 ## Author
-jdobosz 
+Jacek Dobosz
