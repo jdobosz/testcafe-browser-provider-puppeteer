@@ -23,7 +23,6 @@ gulp.task('lint', function () {
             'test/**/*.js',
             'Gulpfile.js'
         ])
-        .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
 });
