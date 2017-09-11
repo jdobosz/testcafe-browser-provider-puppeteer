@@ -1,7 +1,8 @@
 # testcafe-browser-provider-puppeteer
 [![Build Status](https://travis-ci.org/jdobosz/testcafe-browser-provider-puppeteer.svg)](https://travis-ci.org/jdobosz/testcafe-browser-provider-puppeteer)
 
-This is the [puppeteer](https://github.com/GoogleChrome/puppeteer) browser provider plugin for [TestCafe](http://devexpress.github.io/testcafe).
+This is the [puppeteer](https://github.com/GoogleChrome/puppeteer)/chromium browser provider plugin for [TestCafe](http://devexpress.github.io/testcafe).
+It allows to run tastcafe e2e tests headless in CI pipeline without any external dependency like xvfb, since everything what is needed is installed via npm.
 
 ## Install
 
