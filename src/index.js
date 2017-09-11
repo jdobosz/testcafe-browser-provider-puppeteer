@@ -27,7 +27,8 @@ export default {
 
     async init () {
         this.browser = await puppeteer.launch({
-            timeout: 10000
+            timeout: 10000,
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
     },
 
