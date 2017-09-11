@@ -25,9 +25,6 @@ export default {
         await page.close();
     },
 
-
-    // Optional - implement methods you need, remove other methods
-    // Initialization
     async init () {
         this.browser = await puppeteer.launch({
             timeout: 10000
