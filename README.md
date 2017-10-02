@@ -35,12 +35,11 @@ testCafe
 
 On same older linux distributions, fails chromium due to sandbox issues - see [this](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#chrome-headless-fails-due-to-sandbox-issues).
 
-You can try in such case the branch [no_sandbox](https://github.com/jdobosz/testcafe-browser-provider-puppeteer/tree/no_sandbox) directly in package.json:
+You can try in such case running the plugin without sandbox restriction
 
  ```
- ....
-    "testcafe-browser-provider-puppeteer": "git+https://github.com/jdobosz/testcafe-browser-provider-puppeteer.git#no_sandbox"
-    ....
+testcafe puppeteer:no_sandbox 'path/to/test/file.js'
+
 ```
 
 ## Author
