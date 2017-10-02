@@ -13,7 +13,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "gulp test",
+    "test": "cd test && npm test",
     "publish-please": "publish-please",
     "prepublish": "publish-please guard"
   },
