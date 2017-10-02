@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "test": "cd test && npm test",
-    "publish-please": "publish-please",
-    "prepublish": "publish-please guard"
+    "publish-please": "publish-please"
   },
   "keywords": [
     "testcafe",
