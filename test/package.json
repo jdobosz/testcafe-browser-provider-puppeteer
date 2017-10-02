@@ -4,7 +4,7 @@
     "description": "e2e tests",
     "main": "test.js",
     "scripts": {
-      "test": "testcafe puppeteer test.js"
+      "test": "npm install && testcafe puppeteer test.js"
     },
     "author": "jacek@dobosz.at",
     "license": "ISC",
