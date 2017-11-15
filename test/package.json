@@ -4,12 +4,12 @@
   "description": "e2e tests",
   "main": "test.js",
   "scripts": {
-    "test": "npm install && testcafe puppeteer test.js"
+    "test": "npm install && testcafe puppeteer test.js -s ./"
   },
   "author": "jacek@dobosz.at",
   "license": "ISC",
   "devDependencies": {
     "testcafe": "^0.17.2",
-    "testcafe-browser-provider-puppeteer": "git+https://github.com/KubaZ/testcafe-browser-provider-puppeteer.git#v1.2.2"
+    "testcafe-browser-provider-puppeteer": "git+https://github.com/KubaZ/testcafe-browser-provider-puppeteer.git#v1.2.3"
   }
 }
