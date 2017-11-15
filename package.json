@@ -1,6 +1,6 @@
 {
   "name": "testcafe-browser-provider-puppeteer",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "puppeteer TestCafe browser provider plugin.",
   "repository": "https://github.com/jdobosz/testcafe-browser-provider-puppeteer",
   "homepage": "https://github.com/jdobosz/testcafe-browser-provider-puppeteer",
@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "test": "cd test && npm test",
+    "build": "gulp build",
     "publish-please": "publish-please"
   },
   "keywords": [

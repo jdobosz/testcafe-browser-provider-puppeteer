@@ -50,7 +50,6 @@ export default {
 
     // Extra methods
     async resizeWindow(id, width, height) {
-        console.log(id, width, height, this.openedPages[id].setViewport({ width, height }));
         await this.openedPages[id].setViewport({ width, height });
     },
 

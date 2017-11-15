@@ -10,6 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "testcafe": "^0.17.2",
-    "testcafe-browser-provider-puppeteer": "git+https://github.com/KubaZ/testcafe-browser-provider-puppeteer.git#v1.2.1"
+    "testcafe-browser-provider-puppeteer": "git+https://github.com/KubaZ/testcafe-browser-provider-puppeteer.git#v1.2.2"
   }
 }
