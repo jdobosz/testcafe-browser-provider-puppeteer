@@ -49,11 +49,11 @@ export default {
     },
 
     // Extra methods
-    async resizeWindow(/* id, width, height, currentWidth, currentHeight */) {
-        this.reportWarning('The window resize functionality is not supported by the "puppeteer" browser provider.');
+    async resizeWindow(id, width, height) {
+        await this.openedPages[id].setViewport(width, height);
     },
 
-    async takeScreenshot(/* id, screenshotPath, pageWidth, pageHeight */) {
-        this.reportWarning('The screenshot functionality is not supported by the "puppeteer" browser provider.');
+    async takeScreenshot(id, screenshotPath) {
+        await this.openedPages[id].screenshot({ path: screenshotPath });
     }
 };
