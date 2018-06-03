@@ -11,13 +11,12 @@ export default {
 
     // Required - must be implemented
     // Browser control
-    async openBrowser(id, pageUrl, browserName) {
+    async openBrowser (id, pageUrl, browserName) {
 
         if (!this.browser) {
             let puppeteerArgs = [];
 
-            if (browserName === "no_sandbox") {
-                console.log('Using puppeteer without sandbox!');
+            if (browserName === 'no_sandbox') {
                 puppeteerArgs = [
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
@@ -36,24 +35,22 @@ export default {
         this.openedPages[id] = page;
     },
 
-    async closeBrowser(id) {
-        const page = this.openedPages[id];
-
+    async closeBrowser (id) {
         delete this.openedPages[id];
-        await page.close();
+        await this.browser.close();
     },
 
 
-    async isValidBrowserName() {
+    async isValidBrowserName () {
         return true;
     },
 
     // Extra methods
-    async resizeWindow(id, width, height) {
+    async resizeWindow (id, width, height) {
         await this.openedPages[id].setViewport({ width, height });
     },
 
-    async takeScreenshot(id, screenshotPath) {
+    async takeScreenshot (id, screenshotPath) {
         await this.openedPages[id].screenshot({ path: screenshotPath });
     }
 };
