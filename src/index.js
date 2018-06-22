@@ -16,14 +16,16 @@ export default {
         if (!this.browser) {
             let puppeteerArgs = [];
 
-            if (browserName === 'no_sandbox') {
+            if (browserName === 'no_sandbox' || browserName === 'gui_no_sandbox') {
                 puppeteerArgs = [
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
                 ];
             }
+            const headless = browserName !== 'gui' && browserName !== 'gui_no_sandbox';
             this.browser = await puppeteer.launch({
                 timeout: 10000,
+                headless,
                 args: puppeteerArgs
             });
 
