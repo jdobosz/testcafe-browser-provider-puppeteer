@@ -8,25 +8,29 @@ export default {
 
     openedPages: {},
 
-
     // Required - must be implemented
     // Browser control
     async openBrowser (id, pageUrl, browserName) {
-
         if (!this.browser) {
-            let puppeteerArgs = [];
+            const launchArgs = {
+                timeout: 10000
+            };
 
-            if (browserName === 'no_sandbox') {
-                puppeteerArgs = [
-                    '--no-sandbox',
-                    '--disable-setuid-sandbox'
-                ];
+            const noSandboxArgs = ['--no-sandbox', '--disable-setuid-sandbox'];
+
+            if (browserName === 'no_sandbox') launchArgs.args = noSandboxArgs;
+            else if (browserName.indexOf('?') !== -1) {
+                const userArgs = browserName.split('?');
+                const params = userArgs[0];
+
+                if (params === 'no_sandbox') launchArgs.args = noSandboxArgs;
+
+                const executablePath = userArgs[1];
+
+                if (executablePath.length > 0)
+                    launchArgs.executablePath = executablePath;
             }
-            this.browser = await puppeteer.launch({
-                timeout: 10000,
-                args: puppeteerArgs
-            });
-
+            this.browser = await puppeteer.launch(launchArgs);
         }
 
         const page = await this.browser.newPage();
@@ -39,7 +43,6 @@ export default {
         delete this.openedPages[id];
         await this.browser.close();
     },
-
 
     async isValidBrowserName () {
         return true;
