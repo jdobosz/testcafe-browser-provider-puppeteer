@@ -1,11 +1,18 @@
 {
   "compact": false,
   "presets": [
-    "es2015-loose",
-    "babel-preset-stage-3"
+    [
+      "@babel/preset-env",
+      {
+        "forceAllTransforms": true,
+        "targets": {
+          "node": true,
+        },
+      },
+    ]
   ],
   "plugins": [
-    "transform-runtime",
+    "@babel/plugin-transform-runtime",
     "add-module-exports"
   ]
 }
