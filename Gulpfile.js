@@ -5,11 +5,11 @@ var del         = require('del');
 var nodeVersion = require('node-version');
 
 
-gulp.task('clean', function () {
+var clean = function () {
     return del('lib');
-});
+};
 
-gulp.task('lint', function () {
+var lint = function () {
     // TODO: eslint supports node version 4 or higher.
     // Remove this condition once we get rid of node 0.10 support.
     if (nodeVersion.major === '0')
@@ -26,21 +26,15 @@ gulp.task('lint', function () {
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
-});
+};
 
-gulp.task('build', ['clean'], function () {
+var build = function () {
     return gulp
         .src('src/**/*.js')
         .pipe(babel())
         .pipe(gulp.dest('lib'));
-});
+};
 
-gulp.task('test', ['build'], function () {
-    return gulp
-        .src('test/**.js')
-        .pipe(mocha({
-            ui:       'bdd',
-            reporter: 'spec',
-            timeout:  typeof v8debug === 'undefined' ? 2000 : Infinity // NOTE: disable timeouts in debug
-        }));
-});
+gulp.task('clean', clean);
+gulp.task('lint', lint);
+gulp.task('build', gulp.series(lint, clean, build));
