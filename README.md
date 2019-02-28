@@ -44,3 +44,6 @@ testcafe puppeteer:no_sandbox 'path/to/test/file.js'
 
 ## Author
 Jacek Dobosz
+
+## Contributors
+Lukasz Szmit
