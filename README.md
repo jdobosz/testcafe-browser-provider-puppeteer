@@ -42,8 +42,22 @@ testcafe puppeteer:no_sandbox 'path/to/test/file.js'
 
 ```
 
+In order to speedup CI you can provide custom executable of chromium browser instead to download it all the time:
+
+```
+runner
+  .browsers(['puppeteer:no_sandbox?/usr/bin/chromium-browser'])
+
+
+runner
+  .browsers(['puppeteer:?/usr/bin/chromium-browser'])
+
+```
+
 ## Author
 Jacek Dobosz
 
 ## Contributors
 Lukasz Szmit
+
+Pedro Scaff
