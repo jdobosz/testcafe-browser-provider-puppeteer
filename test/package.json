@@ -4,7 +4,7 @@
   "description": "e2e tests",
   "main": "test.js",
   "scripts": {
-    "test": "npm install && testcafe puppeteer:no_sandbox test.js -s ./"
+    "test": "npm install && testcafe \"puppeteer:no_sandbox:emulate=Galaxy S5\" test.js -s ./"
   },
   "author": "jacek@dobosz.at",
   "license": "ISC",

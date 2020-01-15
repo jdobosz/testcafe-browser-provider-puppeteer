@@ -1,9 +1,9 @@
 {
-  "name": "testcafe-browser-provider-puppeteer",
-  "version": "1.4.0",
+  "name": "@dreamlines.dev/testcafe-browser-provider-puppeteer",
+  "version": "1.5.0",
   "description": "puppeteer TestCafe browser provider plugin.",
-  "repository": "https://github.com/jdobosz/testcafe-browser-provider-puppeteer",
-  "homepage": "https://github.com/jdobosz/testcafe-browser-provider-puppeteer",
+  "repository": "https://github.com/dreamlines-dev/testcafe-browser-provider-puppeteer",
+  "homepage": "https://github.com/dreamlines-dev/testcafe-browser-provider-puppeteer",
   "author": {
     "name": "jdobosz",
     "email": "jacek@dobosz.at"
@@ -30,7 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "puppeteer": ">=1.4.0 <2"
+    "puppeteer": "^1.20.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",

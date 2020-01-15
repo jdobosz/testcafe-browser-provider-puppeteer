@@ -11,6 +11,7 @@ export default {
     // Required - must be implemented
     // Browser control
     async openBrowser (id, pageUrl, browserName) {
+        const browserArgs = browserName.split(':');
         if (!this.browser) {
             const launchArgs = {
                 timeout: 10000
@@ -18,7 +19,7 @@ export default {
 
             const noSandboxArgs = ['--no-sandbox', '--disable-setuid-sandbox'];
 
-            if (browserName === 'no_sandbox') launchArgs.args = noSandboxArgs;
+            if (browserArgs.indexOf('no_sandbox') !== -1) launchArgs.args = noSandboxArgs;
             else if (browserName.indexOf('?') !== -1) {
                 const userArgs = browserName.split('?');
                 const params = userArgs[0];
@@ -34,6 +35,17 @@ export default {
         }
 
         const page = await this.browser.newPage();
+
+        const emulationArg = browserArgs.find(v => /^emulate/.test(v));
+
+        if (Boolean(emulationArg)) {
+          const [, emulationDevice] = emulationArg.split('=');
+          const device = puppeteer.devices[emulationDevice];
+
+          if (!device) throw new Error('Emulation device is not supported'); 
+
+          await page.emulate(device);
+        }
 
         await page.goto(pageUrl);
         this.openedPages[id] = page;
