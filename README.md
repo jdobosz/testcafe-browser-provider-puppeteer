@@ -31,6 +31,10 @@ testCafe
     .run();
 ```
 
+## Device Emulation
+
+If you want to emulate another device you can run `pupeteer:emulate=<Device name>`. The supported devices are listed in the [Puppeteer DeviceDescriptors](https://github.com/puppeteer/puppeteer/blob/master/lib/DeviceDescriptors.js). 
+
 ## Troubleshooting
 
 On same older linux distributions, fails chromium due to sandbox issues - see [this](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#chrome-headless-fails-due-to-sandbox-issues).
