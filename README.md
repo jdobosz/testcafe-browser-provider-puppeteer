@@ -33,7 +33,7 @@ testCafe
 
 ## Device Emulation
 
-If you want to emulate another device you can run `pupeteer:emulate=<Device name>`. The supported devices are listed in the [Puppeteer DeviceDescriptors](https://github.com/puppeteer/puppeteer/blob/master/lib/DeviceDescriptors.js). 
+If you want to emulate another device you can run `pupeteer:emulate=<Device name>`. The supported devices are listed in the [Puppeteer DeviceDescriptors](https://github.com/puppeteer/puppeteer/blob/master/lib/DeviceDescriptors.js).
 
 ## Troubleshooting
 
@@ -65,3 +65,5 @@ Jacek Dobosz
 Lukasz Szmit
 
 Pedro Scaff
+
+Bhavdeep Dhanjal
