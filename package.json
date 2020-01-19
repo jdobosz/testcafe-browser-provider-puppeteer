@@ -1,6 +1,6 @@
 {
   "name": "testcafe-browser-provider-puppeteer",
-  "version": "1.5.0",
+  "version": "1.5.2",
   "description": "puppeteer TestCafe browser provider plugin.",
   "repository": "https://github.com/jdobosz/testcafe-browser-provider-puppeteer",
   "homepage": "https://github.com/jdobosz/testcafe-browser-provider-puppeteer",
