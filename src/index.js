@@ -42,7 +42,6 @@ export default {
         const page = await this.browser.newPage();
 
         if (this.userAgent) {
-            console.log(`USING USERAGENT: ${this.userAgent}`);
             page.setUserAgent(this.userAgent);
         }
 
