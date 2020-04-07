@@ -14,9 +14,9 @@
       "email": "lukasz.szmit@workday.com"
     }
   ],
-  "main": "src/index",
+  "main": "lib/index",
   "files": [
-    "src"
+    "lib"
   ],
   "scripts": {
     "test": "cd test && npm test",

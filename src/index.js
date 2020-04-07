@@ -42,7 +42,7 @@ export default {
         const page = await this.browser.newPage();
 
         if (this.userAgent) {
-            page.setUserAgent(this.userAgent);
+            await page.setUserAgent(this.userAgent);
         }
 
         const emulationArg = browserArgs.find((v) => /^emulate/.test(v));
