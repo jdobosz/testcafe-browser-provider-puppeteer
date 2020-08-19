@@ -47,7 +47,7 @@ export default {
           await page.emulate(device);
         }
 
-        await page.goto(pageUrl);
+        await page.goto(pageUrl, { waitUntil: 'networkidle0' });
         this.openedPages[id] = page;
     },
 
