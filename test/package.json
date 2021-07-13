@@ -1,6 +1,6 @@
 {
   "name": "e2e-tests",
-  "version": "1.5.0",
+  "version": "1.6.1",
   "description": "e2e tests",
   "main": "test.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "jacek@dobosz.at",
   "license": "ISC",
   "devDependencies": {
-    "testcafe": "^0.20.2 || ^1.0.0",
+    "testcafe": "^1.15.0",
     "testcafe-browser-provider-puppeteer": "../"
   }
 }
