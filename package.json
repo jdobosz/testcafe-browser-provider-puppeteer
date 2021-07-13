@@ -1,6 +1,6 @@
 {
   "name": "testcafe-browser-provider-puppeteer-launcher",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Yet another puppeteer TestCafe browser provider plugin.",
   "repository": "https://github.com/oui-team/testcafe-browser-provider-puppeteer-launcher",
   "homepage": "https://github.com/oui-team/testcafe-browser-provider-puppeteer-launcher",
