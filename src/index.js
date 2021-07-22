@@ -5,7 +5,7 @@ export default {
     isMultiBrowser: true,
 
     browser: null,
-    userAgent: null,
+    userAgentSuffix: null,
 
     openedPages: {},
 
@@ -34,15 +34,17 @@ export default {
                     launchArgs.executablePath = executablePath;
             }
 
-            this.userAgent = parseUserAgentFromArgs(browserArgs);
+            this.userAgentSuffix = parseUserAgentFromArgs(browserArgs);
 
             this.browser = await puppeteer.launch(launchArgs);
         }
 
         const page = await this.browser.newPage();
 
-        if (this.userAgent) {
-            await page.setUserAgent(this.userAgent);
+        if (this.userAgentSuffix) {
+            await page.setUserAgent(
+                `${page.userAgent()} ${this.userAgentSuffix}`
+            );
         }
 
         const emulationArg = browserArgs.find((v) => /^emulate/.test(v));
@@ -80,10 +82,12 @@ export default {
 };
 
 function parseUserAgentFromArgs(browserArgs = []) {
-    const uaIdx = browserArgs.findIndex((x) => x.includes("user_agent="));
+    const uaIdx = browserArgs.findIndex((x) =>
+        x.includes("user_agent_suffix=")
+    );
     if (uaIdx !== -1) {
         const matches = browserArgs[uaIdx].match(
-            /user_agent=[\"\']?(.*)[\"\']?/i
+            /user_agent_suffix=[\"\']?(.*)[\"\']?/i
         );
 
         if (matches.length > 1) {
