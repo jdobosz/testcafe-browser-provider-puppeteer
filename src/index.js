@@ -42,7 +42,7 @@ export default {
         const page = await this.browser.newPage();
 
         if (this.userAgentSuffix) {
-            const currentUa = await page.getUserAgent();
+            const currentUa = await browser.userAgent();
             const newUa = `${currentUa} ${this.userAgentSuffix}`;
             await page.setUserAgent(newUa);
         }
