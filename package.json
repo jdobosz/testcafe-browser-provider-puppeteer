@@ -1,6 +1,6 @@
 {
   "name": "testcafe-browser-provider-puppeteer-launcher",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Yet another puppeteer TestCafe browser provider plugin.",
   "repository": "https://github.com/oui-team/testcafe-browser-provider-puppeteer-launcher",
   "homepage": "https://github.com/oui-team/testcafe-browser-provider-puppeteer-launcher",
@@ -34,22 +34,23 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@babel/runtime": "^7.16.7",
-    "puppeteer": "^13.1.2"
+    "@babel/runtime": "^7.17.2",
+    "puppeteer": "^13.4.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.12",
-    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
-    "babel-eslint": "^10.0.0",
     "babel-plugin-add-module-exports": "^1.0.4",
     "del": "^6.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "glob-parent": "^6.0.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-eslint": "^6.0.0",
     "gulp-mocha": "^8.0.0",
-    "node-version": "^2.0.0",
-    "glob-parent": "^6.0.2"
+    "node-version": "^2.0.0"
   }
 }
