@@ -4,12 +4,12 @@
   "description": "e2e tests",
   "main": "test.js",
   "scripts": {
-    "test": "npm install && testcafe \"puppeteer:no_sandbox:emulate=Galaxy S5\" test.js -s ./"
+    "test": "npm ci && testcafe \"puppeteer-launcher:no_sandbox:emulate=Pixel 5\" test.js -s ./"
   },
   "author": "jacek@dobosz.at",
   "license": "ISC",
   "devDependencies": {
-    "testcafe": "^1.18.4",
-    "testcafe-browser-provider-puppeteer": "../"
+    "testcafe": "^2.1.0",
+    "testcafe-browser-provider-puppeteer-launcher": "../"
   }
 }

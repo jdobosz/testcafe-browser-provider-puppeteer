@@ -15,7 +15,7 @@ var lint = function () {
     if (nodeVersion.major === '0')
         return null;
 
-    var eslint = require('gulp-eslint');
+    const gulpESLintNew = require('gulp-eslint-new');
 
     return gulp
         .src([
@@ -23,9 +23,10 @@ var lint = function () {
             'test/**/*.js',
             'Gulpfile.js'
         ])
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError());
+        .pipe(gulpESLintNew({ fix: true }))     // Lint files, create fixes.
+        .pipe(gulpESLintNew.fix())              // Fix files if necessary.
+        .pipe(gulpESLintNew.format())           // Output lint results to the console.
+        .pipe(gulpESLintNew.failAfterError());  // Exit with an error if problems are found.
 };
 
 var build = function () {

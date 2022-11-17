@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import {KnownDevices} from 'puppeteer';
 
 export default {
     // Multiple browsers support
@@ -40,9 +41,9 @@ export default {
 
         if (Boolean(emulationArg)) {
           const [, emulationDevice] = emulationArg.split('=');
-          const device = puppeteer.devices[emulationDevice];
+          const device = KnownDevices[emulationDevice];
 
-          if (!device) throw new Error('Emulation device is not supported'); 
+          if (!device) throw new Error('Emulation device is not supported');
 
           await page.emulate(device);
         }
