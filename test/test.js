@@ -1,12 +1,17 @@
 import Page from './page-model';
 
 fixture `e2e tests`
-.page `http://www.dobosz.at`
+.page `https://www.google.com/`
 ;
 
 const page = new Page();
 
-test('it should render header element', async t => {
+test('it should render title element', async t => {
     await t
-        .expect(page.Header.exists).ok();
+        .expect(page.Title.exists).ok();
+});
+
+test('title element should be equal to Google', async t => {
+    await t
+        .expect(page.Title.textContent).eql('Google');
 });

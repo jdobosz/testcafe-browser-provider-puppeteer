@@ -1,9 +1,9 @@
 {
   "name": "testcafe-browser-provider-puppeteer-launcher",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Yet another puppeteer TestCafe browser provider plugin.",
-  "repository": "https://github.com/oui-team/testcafe-browser-provider-puppeteer-launcher",
-  "homepage": "https://github.com/oui-team/testcafe-browser-provider-puppeteer-launcher",
+  "repository": "https://github.com/elmy-team/testcafe-browser-provider-puppeteer-launcher",
+  "homepage": "https://github.com/elmy-team/testcafe-browser-provider-puppeteer-launcher",
   "author": {
     "name": "jdobosz",
     "email": "jacek@dobosz.at"
@@ -35,7 +35,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.20.1",
-    "puppeteer": "^19.2.2"
+    "puppeteer": "^20.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
