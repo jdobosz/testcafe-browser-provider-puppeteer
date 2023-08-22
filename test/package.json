@@ -9,7 +9,7 @@
   "author": "jacek@dobosz.at",
   "license": "ISC",
   "devDependencies": {
-    "testcafe": "^2.6.0",
+    "testcafe": "^3.2.0",
     "testcafe-browser-provider-puppeteer-launcher": "../"
   }
 }
