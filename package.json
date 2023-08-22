@@ -24,7 +24,9 @@
   ],
   "scripts": {
     "test": "cd test && npm test",
-    "build": "gulp build"
+    "build": "gulp build",
+    "lint": "rome ci .",
+    "lint-fix": "rome check . --apply && rome format . --write"
   },
   "keywords": [
     "testcafe",
@@ -40,19 +42,16 @@
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
-    "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "babel-plugin-add-module-exports": "^1.0.4",
     "del": "^6.0.0",
-    "eslint": "^8.8.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "glob-parent": "^6.0.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-eslint-new": "^1.7.0",
     "gulp-mocha": "^8.0.0",
-    "node-version": "^2.0.0"
+    "node-version": "^2.0.0",
+    "rome": "^12.1.0"
   },
   "engines": {
     "node": ">=16"

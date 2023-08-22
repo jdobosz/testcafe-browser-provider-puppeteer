@@ -1,7 +1,7 @@
-import {Selector} from 'testcafe';
+import { Selector } from 'testcafe';
 
 export default class Page {
-    constructor() {
-        this.Title = Selector('head > title');
-    }
+  constructor() {
+    this.Title = Selector('head > title');
+  }
 }
