@@ -16,6 +16,7 @@ export default {
     if (!this.browser) {
       const launchArgs = {
         timeout: 10000,
+        headless: 'new',
       };
 
       const noSandboxArgs = ['--no-sandbox', '--disable-setuid-sandbox'];
