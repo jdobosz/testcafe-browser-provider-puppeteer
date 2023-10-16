@@ -56,6 +56,27 @@ runner
 
 ```
 
+## Publish
+
+```sh
+npm ci && npm run build
+npm version 1.x.x
+```
+Use gcloud identification for npm publication by running this command
+and copy the output to your ~/.npmrc
+```sh
+gcloud artifacts print-settings npm --project=bcm-energy-production --scope=@elmy --repository="node-libs" --location="europe"
+```
+Then run:
+```sh
+npm run artifactregistry-login
+```
+
+Then publish
+```sh
+npm publish
+```
+
 ## Author
 Jacek Dobosz
 

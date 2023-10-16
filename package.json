@@ -1,5 +1,5 @@
 {
-  "name": "testcafe-browser-provider-puppeteer-launcher",
+  "name": "@elmy/testcafe-browser-provider-puppeteer-launcher",
   "version": "3.2.0",
   "description": "Yet another puppeteer TestCafe browser provider plugin.",
   "repository": "https://github.com/elmy-team/testcafe-browser-provider-puppeteer-launcher",
@@ -26,7 +26,8 @@
     "test": "cd test && npm test",
     "build": "gulp build",
     "lint": "rome ci .",
-    "lint-fix": "rome check . --apply && rome format . --write"
+    "lint-fix": "rome check . --apply && rome format . --write",
+    "artifactregistry-login": "npx google-artifactregistry-auth"
   },
   "keywords": [
     "testcafe",
